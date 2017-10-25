@@ -13,7 +13,8 @@ docker  run -itd    --name mysql  -e MYSQL_ROOT_PASSWORD=264333 mysql
 	找一台做  master 主控。 
 	其他的都是做slave 这样方便管理
 	
-	然后在每台slave  插入 supermaster  数据。 或者直接在   每台slave 的web 面板添加 add  supermaster
+	然后在每台slave  插入 supermaster  数据。 或者直接在   每台slave 的web 面板添加 add  supermaster
+这样主从就可以实现dns记录同步了 。
 	
 	
 	
