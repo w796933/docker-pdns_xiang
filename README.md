@@ -3,11 +3,11 @@
 
 首先 创建个MySQL容器 让他链接 
 
-docker  run -itd    --name mysql  -e MYSQL_ROOT_PASSWORD=264333 mysql
+docker  run -itd    --name mysql  -e MYSQL_ROOT_PASSWORD=aaaaa mysql
 
 
-    docker run  -itd  --name ns1.nb03.com -p  8080:80 --link mysql:db  -e PDNS_ALLOW_AXFR_IPS=172.17.0.4  -e  PDNS_MASTER=yes -e POWERADMIN_HOSTMASTER=ns1.nb03.com -e POWERADMIN_NS1=ns1.nb03.com -e POWERADMIN_NS2=ns2.nb03.com  secns/pdns:4.0
-    docker run  -itd  --name ns2.nb03.com  --link mysql2:db  -p 8089:80   -e PDNS_MASTER=no -e  PDNS_SLAVE=yes -e POWERADMIN_HOSTMASTER=ns2.nb03.com -e POWERADMIN_NS1=ns1.nb03.com -e POWERADMIN_NS2=ns2.nb03.com  secns/pdns:4.0
+    docker run  -itd  --name ns1.222.com -p  8080:80 --link mysql:db  -e PDNS_ALLOW_AXFR_IPS=172.17.0.4  -e  PDNS_MASTER=yes -e POWERADMIN_HOSTMASTER=ns1.nb03.com -e POWERADMIN_NS1=ns1.nb03.com -e POWERADMIN_NS2=ns2.nb03.com  secns/pdns:4.0
+    docker run  -itd  --name ns2.222.com  --link mysql2:db  -p 8089:80   -e PDNS_MASTER=no -e  PDNS_SLAVE=yes -e POWERADMIN_HOSTMASTER=ns2.nb03.com -e POWERADMIN_NS1=ns1.nb03.com -e POWERADMIN_NS2=ns2.nb03.com  secns/pdns:4.0
 
 
 	找一台做  master 主控。 
